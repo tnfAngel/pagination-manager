@@ -12,6 +12,7 @@ src/*
 .eslintrc.json
 .gitignore
 .prettierignore
+.node_modules/*
 .prettierrc
 .yarnrc.yml
 tsconfig.json
