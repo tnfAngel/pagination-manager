@@ -1,4 +1,3 @@
-
 <a href="https://github.com/tnfAngel/pagination-manager">
     <img src="https://raw.githubusercontent.com/tnfAngel/pagination-manager/main/assets/PM_logo_alt.png" alt="Pagination Manager Logo" width="250" height="250" align="right"/>
 </a>
@@ -233,7 +232,7 @@ PaginationManager.humanNextPageIndex; // 2
 
 - PrevPageIndex | `.prevPageIndex` -> number
 
-Returns the prev page index starting with 0.
+Returns the previous page index starting with 0.
 
 ```js
 PaginationManager.prevPageIndex; // 0
@@ -241,7 +240,7 @@ PaginationManager.prevPageIndex; // 0
 
 - HumanPrevPageIndex | `.humanPrevPageIndex` -> number
 
-Returns the prev page index starting with 1.
+Returns the previous page index starting with 1.
 
 ```js
 PaginationManager.humanPrevPageIndex; // 1
@@ -257,7 +256,7 @@ PaginationManager.pageIndicator; // 1/4
 
 - CurrentPage | `.currentPage` -> CurrentPage
 
-Returns the current page object.
+Returns the current page element.
 
 ```js
 PaginationManager.currentPage; // {...}

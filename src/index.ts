@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 import { PaginationManager } from './classes/PaginationManager';
 import { PaginationBuilder } from './classes/PaginationBuilder';
 import * as util from './util';

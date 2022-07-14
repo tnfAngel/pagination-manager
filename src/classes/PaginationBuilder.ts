@@ -30,7 +30,20 @@ export interface IPaginationBuilderOptions {
  * @typedef {PaginationBuilder}
  */
 export class PaginationBuilder {
+    /**
+     * Array with all the pages.
+     * @date 7/14/2022 - 5:18:40 PM
+     *
+     * @type {Page[]}
+     */
     pages: Page[];
+
+    /**
+     * Pagination Builder Options.
+     * @date 7/14/2022 - 5:18:45 PM
+     *
+     * @type {IPaginationBuilderOptions}
+     */
     options: IPaginationBuilderOptions;
 
     /**
@@ -90,7 +103,7 @@ export class PaginationBuilder {
     }
 
     /**
-     * Sets the options for Pagination Builder
+     * Sets the options for Pagination Builder.
      * @date 7/13/2022 - 6:25:35 PM
      *
      * @param {IPaginationBuilderOptions} options
