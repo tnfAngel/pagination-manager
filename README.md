@@ -219,7 +219,7 @@ PaginationManager.humanCurrentPageIndex; // 1
 Returns the next page index starting with 0.
 
 ```js
-PaginationManager.NextPageIndex; // 1
+PaginationManager.nextPageIndex; // 1
 ```
 
 - HumanNextPageIndex | `.humanNextPageIndex` -> number
