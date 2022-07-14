@@ -1,10 +1,13 @@
+
+<a href="https://github.com/tnfAngel/pagination-manager">
+    <img src="https://raw.githubusercontent.com/tnfAngel/pagination-manager/main/assets/PM_logo_alt.png" alt="Pagination Manager Logo" width="250" height="250" align="right"/>
+</a>
+
 # Pagination Manager
 
-## Summary
-
-- Pagination Manager is an useful framework for improving the use of object pagination in APIs like Discord.
-
-- Framework developed by `tnfAngel`#6557.
+- [Pagination Manager](https://github.com/tnfAngel/pagination-manager) is an useful framework for improving the use of object pagination in APIs like Discord.
+- Lightweight module, **ES6** and **CommonJS** compatible.
+- Package developed by `tnfAngel#6557`
 
 ## Usage
 
@@ -66,7 +69,7 @@ console.log(
 
 ### Pagination Manager Classes
 
--   PaginationBuilder | `.PaginationBuilder()` -> PaginationBuilder
+- PaginationBuilder | `.PaginationBuilder()` -> PaginationBuilder
 
 Builder class for setup the pagination manager and configure the options.
 
@@ -80,7 +83,7 @@ const paginationBuilder = new PaginationBuilder()
 const paginationManager = new PaginationManager(paginationBuilder);
 ```
 
--   PaginationManager | `.PaginationManager(PaginationBuilder)` -> PaginationManager
+- PaginationManager | `.PaginationManager(PaginationBuilder)` -> PaginationManager
 
 Main class, provide all manager methods and properties.
 
@@ -90,7 +93,7 @@ const paginationManager = new PaginationManager(paginationBuilder); // Paginatio
 
 ### Pagination Manager Class Methods
 
--   GetCurrentPage | `.getCurrentPage()` -> CurrentPage
+- GetCurrentPage | `.getCurrentPage()` -> CurrentPage
 
 Returns the current active page. Default to 0.
 
@@ -98,7 +101,7 @@ Returns the current active page. Default to 0.
 PaginationManager.getCurrentPage();
 ```
 
--   GetPages | `.getPages()` -> Pages
+- GetPages | `.getPages()` -> Pages
 
 Returns alls the pages passed in PaginationBuilder class.
 
@@ -106,7 +109,7 @@ Returns alls the pages passed in PaginationBuilder class.
 PaginationManager.getPages();
 ```
 
--   Next | `.next()` -> Page
+- Next | `.next()` -> Page
 
 Sets the current page to the next page and return it.
 
@@ -114,7 +117,7 @@ Sets the current page to the next page and return it.
 PaginationManager.next();
 ```
 
--   Prev | `.prev()` -> Page
+- Prev | `.prev()` -> Page
 
 Sets the current page to the previous page and return it.
 
@@ -122,7 +125,7 @@ Sets the current page to the previous page and return it.
 PaginationManager.prev();
 ```
 
--   First | `.first()` -> Page
+- First | `.first()` -> Page
 
 Sets the current page to the first page and return it.
 
@@ -130,7 +133,7 @@ Sets the current page to the first page and return it.
 PaginationManager.first();
 ```
 
--   Last | `.last()` -> Page
+- Last | `.last()` -> Page
 
 Sets the current page to the last page and return it.
 
@@ -138,7 +141,7 @@ Sets the current page to the last page and return it.
 PaginationManager.last();
 ```
 
--   SetPage | `.setPage(page)` -> Page
+- SetPage | `.setPage(page)` -> Page
 
 Sets the current page to the page provided and return it. Pages will start with 0.
 
@@ -146,7 +149,7 @@ Sets the current page to the page provided and return it. Pages will start with 
 PaginationManager.setPage(0);
 ```
 
--   SetHumanPage | `.setHumanPage(page)` -> Page
+- SetHumanPage | `.setHumanPage(page)` -> Page
 
 Sets the current page to the page provided and return it. Same as SetPage but pages will start with 1.
 
@@ -154,7 +157,7 @@ Sets the current page to the page provided and return it. Same as SetPage but pa
 PaginationManager.setHumanPage(1);
 ```
 
--   GetPage | `.getPage(page)` -> Page
+- GetPage | `.getPage(page)` -> Page
 
 Returns the page provided. Pages will start with 0.
 
@@ -162,7 +165,7 @@ Returns the page provided. Pages will start with 0.
 PaginationManager.getPage(0);
 ```
 
--   GetHumanPage | `.getHumanPage(page)` -> Page
+- GetHumanPage | `.getHumanPage(page)` -> Page
 
 Returns the page provided. Same as GetPage but pages will start with 1.
 
@@ -172,7 +175,7 @@ PaginationManager.getHumanPage(1);
 
 ### Pagination Manager Class Property's
 
--   Pages | `.pages` -> Page[]
+- Pages | `.pages` -> Page[]
 
 Returns alls the pages passed in PaginationBuilder class.
 
@@ -180,7 +183,7 @@ Returns alls the pages passed in PaginationBuilder class.
 PaginationManager.pages; // [...]
 ```
 
--   Options | `.options` -> PaginationBuilderOptions
+- Options | `.options` -> PaginationBuilderOptions
 
 Returns the options passed in PaginationBuilder class.
 
@@ -188,7 +191,7 @@ Returns the options passed in PaginationBuilder class.
 PaginationManager.options; // {...}
 ```
 
--   PagesSize | `.pagesSize` -> number
+- PagesSize | `.pagesSize` -> number
 
 Returns the pages size starting with 1.
 
@@ -196,7 +199,7 @@ Returns the pages size starting with 1.
 PaginationManager.pagesSize; // 4
 ```
 
--   CurrentPageIndex | `.currentPageIndex` -> number
+- CurrentPageIndex | `.currentPageIndex` -> number
 
 Returns the current page index starting with 0.
 
@@ -204,7 +207,7 @@ Returns the current page index starting with 0.
 PaginationManager.currentPageIndex; // 0
 ```
 
--   HumanCurrentPageIndex | `.humanCurrentPageIndex` -> number
+- HumanCurrentPageIndex | `.humanCurrentPageIndex` -> number
 
 Returns the current page index starting with 1.
 
@@ -212,7 +215,7 @@ Returns the current page index starting with 1.
 PaginationManager.humanCurrentPageIndex; // 1
 ```
 
--   NextPageIndex | `.nextPageIndex` -> number
+- NextPageIndex | `.nextPageIndex` -> number
 
 Returns the next page index starting with 0.
 
@@ -220,7 +223,7 @@ Returns the next page index starting with 0.
 PaginationManager.NextPageIndex; // 1
 ```
 
--   HumanNextPageIndex | `.humanNextPageIndex` -> number
+- HumanNextPageIndex | `.humanNextPageIndex` -> number
 
 Returns the next page index starting with 1.
 
@@ -228,7 +231,7 @@ Returns the next page index starting with 1.
 PaginationManager.humanNextPageIndex; // 2
 ```
 
--   PrevPageIndex | `.prevPageIndex` -> number
+- PrevPageIndex | `.prevPageIndex` -> number
 
 Returns the prev page index starting with 0.
 
@@ -236,7 +239,7 @@ Returns the prev page index starting with 0.
 PaginationManager.prevPageIndex; // 0
 ```
 
--   HumanPrevPageIndex | `.humanPrevPageIndex` -> number
+- HumanPrevPageIndex | `.humanPrevPageIndex` -> number
 
 Returns the prev page index starting with 1.
 
@@ -244,7 +247,7 @@ Returns the prev page index starting with 1.
 PaginationManager.humanPrevPageIndex; // 1
 ```
 
--   PageIndicator | `.pageIndicator` -> string
+- PageIndicator | `.pageIndicator` -> string
 
 Returns an human-readable string with the human current page index and the human page size.
 
@@ -252,7 +255,7 @@ Returns an human-readable string with the human current page index and the human
 PaginationManager.pageIndicator; // 1/4
 ```
 
--   CurrentPage | `.currentPage` -> CurrentPage
+- CurrentPage | `.currentPage` -> CurrentPage
 
 Returns the current page object.
 
@@ -273,3 +276,5 @@ _If you have installation issues, join our [support server](https://discord.gg/8
 
 1. **Open:** Terminal/CMD
 2. **Put:** `yarn add pagination-manager`
+
+![Pagination Banner](https://raw.githubusercontent.com/tnfAngel/pagination-manager/main/assets/PM_banner.png)
