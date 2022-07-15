@@ -195,7 +195,7 @@ PaginationManager.options; // {...}
 Returns the pages size starting with 0.
 
 ```js
-PaginationManager.pagesSize; // 4
+PaginationManager.pagesSize; // 2
 ```
 
 - HumanPagesSize | `.humanPagesSize` -> number
@@ -203,7 +203,7 @@ PaginationManager.pagesSize; // 4
 Returns the pages size starting with 1.
 
 ```js
-PaginationManager.humanPagesSize; // 4
+PaginationManager.humanPagesSize; // 3
 ```
 
 - CurrentPageIndex | `.currentPageIndex` -> number
@@ -259,7 +259,7 @@ PaginationManager.humanPrevPageIndex; // 1
 Returns an human-readable string with the human current page index and the human page size.
 
 ```js
-PaginationManager.pageIndicator; // 1/4
+PaginationManager.pageIndicator; // 1/3
 ```
 
 - CurrentPage | `.currentPage` -> CurrentPage

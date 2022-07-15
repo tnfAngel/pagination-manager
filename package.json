@@ -1,6 +1,6 @@
 {
   "name": "pagination-manager",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Pagination Manager is an useful framework for improving the use of object pagination in APIs like Discord.",
   "main": "build/index.js",
   "directories": {
