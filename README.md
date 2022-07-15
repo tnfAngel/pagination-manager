@@ -27,7 +27,7 @@ console.log(
 ); // { hi: 'this is a page' }
 
 console.log(
-    paginationManager.next();
+    paginationManager.next()
 ); // { hi: 'this is another page'}
 
 console.log(
@@ -54,7 +54,7 @@ console.log(
 ); // { hi: 'this is a page' }
 
 console.log(
-    paginationManager.next();
+    paginationManager.next()
 ); // { hi: 'this is another page'}
 
 console.log(
@@ -74,9 +74,9 @@ Builder class for setup the pagination manager and configure the options.
 
 ```js
 const paginationBuilder = new PaginationBuilder()
-    .addPages([Page1, Page2, Page3]) // Adds multiple pages objects.
-    .addPage(Page4) // Adds unique page object.
-    .setPages([Page5, Page6, Page7]) // Sets pages objects.
+    .addPages([Page1, Page2, Page3]) // Adds multiple pages to the PaginationBuilder.
+    .addPage(Page4) // Adds a single page.
+    .setPages([Page5, Page6, Page7]) //Set the pages in the array.
     .setOptions({ infinitePages: false }); // Pagination Manager options. infinitePages means if when reaching the end of pages, the current page will return to the beginning and vice versa.
 
 const paginationManager = new PaginationManager(paginationBuilder);
@@ -192,10 +192,18 @@ PaginationManager.options; // {...}
 
 - PagesSize | `.pagesSize` -> number
 
-Returns the pages size starting with 1.
+Returns the pages size starting with 0.
 
 ```js
 PaginationManager.pagesSize; // 4
+```
+
+- HumanPagesSize | `.humanPagesSize` -> number
+
+Returns the pages size starting with 1.
+
+```js
+PaginationManager.humanPagesSize; // 4
 ```
 
 - CurrentPageIndex | `.currentPageIndex` -> number

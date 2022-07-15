@@ -31,12 +31,20 @@ export class PaginationManager {
     private options: IPaginationBuilderOptions;
 
     /**
-     * Returns the pages size starting with 1.
+     * Returns the pages size starting with 0.
      * @date 7/14/2022 - 5:14:15 PM
      *
      * @type {!number}
      */
     pagesSize!: number;
+
+    /**
+     * Returns the pages size starting with 1.
+     * @date 7/15/2022 - 1:41:19 AM
+     *
+     * @type {!number}
+     */
+    humanPagesSize!: number;
 
     /**
      * Returns the current page index starting with 0.
@@ -122,7 +130,8 @@ export class PaginationManager {
      * @private
      */
     private setup(): void {
-        this.pagesSize = this.pages.length;
+        this.humanPagesSize = this.pages.length || 1;
+        this.pagesSize = (this.pages.length || 1) - 1;
 
         this.currentPageIndex = this.currentPageIndex
             ? this.currentPageIndex
@@ -130,7 +139,7 @@ export class PaginationManager {
 
         this.currentPageIndex = this.getPageIndex(this.currentPageIndex);
 
-        this.humanCurrentPageIndex = this.currentPageIndex + 1 || 1;
+        this.humanCurrentPageIndex = this.currentPageIndex + 1;
 
         this.nextPageIndex = this.getPageIndex(this.currentPageIndex + 1);
 
@@ -140,7 +149,7 @@ export class PaginationManager {
 
         this.humanPrevPageIndex = this.prevPageIndex + 1;
 
-        this.pageIndicator = `${this.humanCurrentPageIndex}/${this.pagesSize}`;
+        this.pageIndicator = `${this.humanCurrentPageIndex}/${this.humanPagesSize}`;
 
         this.currentPage = this.pages[this.currentPageIndex];
     }

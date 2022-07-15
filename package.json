@@ -10,7 +10,8 @@
     "build": "tsc",
     "lint": "yarn eslint .",
     "fix": "yarn eslint --fix .",
-    "pretty": "yarn prettier --write ."
+    "pretty": "yarn prettier --write .",
+    "test": "node src/test/index"
   },
   "keywords": [
     "pagination",

@@ -69,4 +69,7 @@
 		"src/**/*",
 		"src/**/*.json",
 	],
+    "exclude": [
+        "src/test/*"
+    ]
 }
