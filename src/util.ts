@@ -1,4 +1,3 @@
-
 /**
  * Throws an error.
  * @date 7/13/2022 - 6:18:40 PM
@@ -9,7 +8,6 @@
  * @extends {Error}
  */
 export class PaginationManagerError extends Error {
-
     /**
      * Creates an instance of PaginationManagerError.
      * @date 7/13/2022 - 6:18:32 PM

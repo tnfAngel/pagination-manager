@@ -5,11 +5,12 @@ import {
 
 /**
  * Pagination Manager Main Class.
- * @date 7/13/2022 - 6:26:37 PM
+ * @date 7/24/2022 - 7:44:35 PM
  *
  * @export
  * @class PaginationManager
  * @typedef {PaginationManager}
+ * @template Page
  */
 export class PaginationManager<Page> {
     /**
@@ -184,7 +185,6 @@ export class PaginationManager<Page> {
         return this.currentPage;
     }
 
-    
     /**
      * Gets all pages
      * @date 7/24/2022 - 7:21:02 PM

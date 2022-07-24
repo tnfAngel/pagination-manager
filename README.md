@@ -43,7 +43,9 @@ console.log(
 
 import { PaginationBuilder, PaginationManager } from 'pagination-manager';
 
-const pagesBuilder = new PaginationBuilder()
+type Page = { hi: string; };
+
+const pagesBuilder = new PaginationBuilder<Page>()
     .addPages([{ hi: 'this is a page' }, { hi: 'this is another page'}])
     .setOptions({ infinitePages: true });
 

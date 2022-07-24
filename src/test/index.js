@@ -8,13 +8,13 @@ const paginationManager = new PaginationManager(pagesBuilder);
 
 console.log('1');
 
-console.log(paginationManager)
+console.log(paginationManager);
 
 console.log(paginationManager.getCurrentPage());
 
 console.log(paginationManager.next());
 
-console.log('2')
+console.log('2');
 
 console.log(paginationManager);
 

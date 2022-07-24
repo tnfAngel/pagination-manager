@@ -14,13 +14,14 @@ export interface IPaginationBuilderOptions {
 
 /**
  * Pagination Builder Class.
- * @date 7/13/2022 - 6:20:04 PM
+ * @date 7/24/2022 - 7:44:04 PM
  *
  * @export
  * @class PaginationBuilder
  * @typedef {PaginationBuilder}
+ * @template Page
  */
-export class PaginationBuilder {
+export class PaginationBuilder<Page> {
     /**
      * Array with all the pages.
      * @date 7/14/2022 - 5:18:40 PM
@@ -57,7 +58,7 @@ export class PaginationBuilder {
      * @param {Page} page
      * @returns {this}
      */
-    addPage<Page>(page: Page) {
+    addPage(page: Page) {
         this.pages.push(page);
         return this;
     }
@@ -69,7 +70,7 @@ export class PaginationBuilder {
      * @param {Page[]} pages
      * @returns {this}
      */
-    addPages<Page>(pages: Page[]) {
+    addPages(pages: Page[]) {
         pages.forEach((page) => this.addPage(page));
         return this;
     }
@@ -81,7 +82,7 @@ export class PaginationBuilder {
      * @param {Page[]} pages
      * @returns {this}
      */
-    setPages<Page>(pages: Page[]) {
+    setPages(pages: Page[]) {
         if (Array.isArray(pages)) {
             this.pages = pages;
         } else {
