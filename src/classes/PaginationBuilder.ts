@@ -1,15 +1,6 @@
 import { PaginationManagerError } from '../util';
 
 /**
- * Page Type.
- * @date 7/13/2022 - 6:19:44 PM
- *
- * @export
- * @typedef {Page}
- */
-export type Page = any;
-
-/**
  * Pagination Builder Options Interface.
  * @date 7/13/2022 - 6:19:13 PM
  *
@@ -29,7 +20,7 @@ export interface IPaginationBuilderOptions {
  * @class PaginationBuilder
  * @typedef {PaginationBuilder}
  */
-export class PaginationBuilder {
+export class PaginationBuilder<Page> {
     /**
      * Array with all the pages.
      * @date 7/14/2022 - 5:18:40 PM

@@ -1,5 +1,4 @@
 import {
-    Page,
     IPaginationBuilderOptions,
     PaginationBuilder,
 } from './PaginationBuilder';
@@ -12,7 +11,7 @@ import {
  * @class PaginationManager
  * @typedef {PaginationManager}
  */
-export class PaginationManager {
+export class PaginationManager<Page> {
     /**
      * Array with all the pages.
      * @date 7/14/2022 - 4:55:47 PM
@@ -108,7 +107,7 @@ export class PaginationManager {
      *
      * @type {Page}
      */
-    currentPage: Page;
+    currentPage!: Page;
 
     /**
      * Creates an instance of PaginationManager.
@@ -117,7 +116,7 @@ export class PaginationManager {
      * @constructor
      * @param {PaginationBuilder} paginationBuilder
      */
-    constructor(paginationBuilder: PaginationBuilder) {
+    constructor(paginationBuilder: PaginationBuilder<Page>) {
         this.pages = paginationBuilder.pages;
         this.options = paginationBuilder.options;
         this.setup();
@@ -185,13 +184,14 @@ export class PaginationManager {
         return this.currentPage;
     }
 
+    
     /**
-     * Gets all the pages.
-     * @date 7/14/2022 - 4:25:32 PM
+     * Gets all pages
+     * @date 7/24/2022 - 7:21:02 PM
      *
-     * @returns {Page}
+     * @returns {Page[]}
      */
-    getPages(): Page {
+    getPages(): Page[] {
         this.setup();
         return this.pages;
     }
@@ -239,7 +239,7 @@ export class PaginationManager {
      * @returns {Page}
      */
     last(): Page {
-        this.currentPageIndex = this.pagesSize - 1;
+        this.currentPageIndex = this.pagesSize;
         this.setup();
         return this.currentPage;
     }
